@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Birdclub</title>
+    <link rel='stylesheet' href='css/style.css'/>
+
+  </head>
+
+  
+  <body>
+    <header class='tall-menu'>Menu</header>
+    <main class='page'>
+      <section class='content' type='whitecontent'>
+        <input type="text" name="user" placeholder="Username" id="userinput">
+
+        <input type="text" name="pass" placeholder="Password" id="userinput">
+
+        <a><button type="submit" class='confirm' name="Login" id="big-button">Sign In</button></a>
+        <a href="pages/step-1.html"><button class='back' name="Sign Up" id="big-button">Register</button></a>  
+      </section>
+    </main>
+    
+    <footer class='footer'>
+        <div class='news'> 
+          <br>
+          <h2>BirdClub Update: Version 1.3.2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip</p>
+          <br><br>
+          <h2> BirdClub Event: The Sparrow Flies South For Winter</h2>
+          <p>Valkyrie Cain, Darquess, Tanith, Ghastly Bespoke and more join the flock!</p>
+        </div>
+      </footer>
+
+      <script>
+          if (localStorage.getItem("pageKey") === null) {
+            localStorage.setItem("pageKey", 1);
+          } else {
+            console.log("There is already a pageKey");
+          }
+        </script>
+  </body>
+  
+</html>

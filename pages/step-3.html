@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <title>Step 2</title>
+    <link rel='stylesheet' href='../css/style.css' />
+  </head>
+
+  <body>
+    <header class='menu'>
+      <div class="title-bubble">
+        <h1>Registration</h1>
+        <p>Step 3/3</p>
+      </div>
+    </header>
+
+    <main class='page'>
+      <section class='form'>
+        <form> <!-- Form was stopping buttons from submitting so I am using it seperately -->
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age here">
+            <div class="messages"></div>
+          </div>
+
+          <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="">  Choose Country</option>
+                <option value="AX">  Åland Islands</option>
+                <option value="AL">  Albania</option>
+                <option value="AF">  Afghanistan</option>
+                <option value="DZ">  Algeria</option>
+                <option value="AS">  American Samoa</option>
+                <option value="AD">  Andorra</option>
+                <option value="AO">  Angola</option>
+                <option value="AI">  Anguilla</option>
+                <option value="AQ">  Antarctica</option>
+                <option value="AG">  Antigua and Barbuda</option>
+                <option value="AR">  Argentina</option>
+                <option value="AM">  Armenia</option>
+                <option value="AW">  Aruba</option>
+                <option value="AU">  Australia</option>
+                <option value="AT">  Austria</option>
+                <option value="AZ">   Azerbaijan</option>
+              </select>
+              <div class="messages"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                  <option value="">  Select Gender</option>
+                  <option value="M">  Boy</option>
+                  <option value="F">  Girl</option>
+                  <option value="O">  Other</option>
+                </select>
+                <div class="messages"></div>
+              </div>
+
+          <div class="form-group checkbox">
+            <input type="checkbox" name="tandc" id="tandc" ><p>I have read and agree to the terms and conditions</p>
+            <div class="messages"></div>
+          </div>    
+          <div class="form-group checkbox">
+              <input type="checkbox" name="mailing" id="mailing" ><p>I want to be emailed about updates and news from BirdClub</p>
+              <div class="messages"></div>
+            </div>  
+          <div class="form-group checkbox">
+            <input type="checkbox" name="remember" id="remember" ><p>Remember me on this computer</p>
+            <div class="messages"></div>
+          </div>
+          
+        </form>
+        <div>
+            <a class="small" href="step-2.html"><button class='back' name="back">Back</button></a>
+            <a class="large" href="confirm.html"><button class='confirm' name="next">Create Account</button></a>
+        </div>
+      </section>
+
+      
+    </main>
+  </body>
+
+  <!-- Online Imports -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <!-- Offline Scripts -->
+  <script type="text/javascript" src="../js/validate-s3.js"></script>
+
+  </body>
+
+</html>

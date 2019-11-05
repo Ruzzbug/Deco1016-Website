@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <title>Step 2</title>
+    <link rel='stylesheet' href='../css/style.css' />
+  </head>
+
+  <body>
+    <header class='menu'>
+      <div class="title-bubble">
+        <h1>Registration</h1>
+        <p>Step 2/3</p>
+      </div>
+    </header>
+
+    <main class='page'>
+      <section class='form'>
+        <form> <!-- Form was stopping buttons from submitting so I am using it seperately -->
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <div class="messages"></div>
+          </div>
+
+          <div class="form-group">
+            <label for='email'>Email Address</label>
+            <input type="text" name="email" placeholder="Email Adress" id="email">
+            <div class="messages"></div>
+          </div>
+
+          <div class="form-group">
+            <label for='password'>Password</label>
+            <input type="password" name="password" placeholder="Password" id="password">
+            <div class="messages"></div>
+          </div>
+
+          <div class="form-group">
+            <label for='cpassword'>Confirm</label>
+            <input type="password" name="cpassword" placeholder="Confirm Password" id="cpassword">
+            <div class="messages"></div>
+          </div>      
+        </form>
+        <div>
+            <a class="small" href="step-1.html"><button class='back' name="back">Back</button></a>
+            <a class="large" href="step-3.html"><button class='confirm' name="next">Next   ➜</button></a>
+        </div>
+      
+      </section>
+
+      
+    </main>
+  </body>
+
+  <!-- Online Imports -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <!-- Offline Scripts -->
+  <script type="text/javascript" src="../js/validate-s2.js"></script>
+
+  </body>
+
+</html>

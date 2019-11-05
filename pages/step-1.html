@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Step 1</title>
+    <link rel='stylesheet' href='../css/style.css'/>
+  </head>
+
+  <body>
+
+    <header class='small'>
+      <div class='title-bubble small'>
+        <h1>Create Your Character</h1>
+      </div>
+    </header>
+    
+    <section class='builder'>
+      <canvas></canvas>
+      <br>
+      <input type="text" name="choose-username" placeholder="Bird's Name" id="userinput">
+      <!-- The Navigation Buttons -->
+      <div>
+        <a class="small" href="../index.html"><button class='back' name="back">Back</button></a> 
+        <a class="large" href="step-2.html"><button class='confirm' name="next">Next   ➜</button></a>
+      </div>
+    </section>
+    
+    <!-- Houses the menu that appears and allows the user to choose customisation options -->
+    <div class="grid-container"></div>
+    
+    <!-- The Customisation Buttons -->
+    <div class="custom-buttons">
+      <!-- Crown Button -->
+      <button class="custom-button" onclick="buildGrid(0)" id="crown-button">T</button>
+      <!-- Beak Button -->
+      <button class="custom-button" onclick="buildGrid(1)" id="beak-button">T</button>
+      <!-- Chest Button -->
+      <button class="custom-button" onclick="buildGrid(2)" id="chest-button">T</button>
+      <!-- Wing Button -->
+      <button class="custom-button" onclick="buildGrid(3)" id="wing-button">T</button>
+      <!-- Feet Button -->
+      <button class="custom-button" onclick="buildGrid(4)" id="foot-button">T</button>
+    </div>
+
+
+    <script src="../js/Character creator.js"></script>
+  </body>
+</html>
