@@ -125,5 +125,6 @@
 
   function showSuccess() {
     // We made it \:D/
-    alert("Success!");
+    console.log("Success!");
+    window.location = 'confirm.html';
   }

@@ -1,7 +1,7 @@
 
  // These are the constraints used to validate the form
-  var constraints = {
-    username: {
+ var constraints = {
+    name: {
       // You need to pick a username too
       presence: true,
       // And it must be between 3 and 20 characters long
@@ -15,25 +15,6 @@
         // but we don't care if the username is uppercase or lowercase
         flags: "i",
         message: "can only contain letters"
-      }
-    },
-    email: {
-      // Email is required
-      presence: true,
-      // and must be an email (duh)
-      email: true
-    },
-    password: {
-      // Password is also required
-      presence: true,
-      // And must be at least 5 characters long
-      length: {
-        minimum: 5
-      }
-    },
-    cpassword: {
-      length: {
-        minimum: 5,
       }
     }
   };
@@ -135,5 +116,5 @@
   function showSuccess() {
     // We made it \:D/
     console.log ("Success!");
-    window.location = 'step-3.html';
+    window.location = 'step2.html';
   }

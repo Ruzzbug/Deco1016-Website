@@ -17,7 +17,7 @@
 
     <main class='page'>
       <section class='form'>
-        <form> <!-- Form was stopping buttons from submitting so I am using it seperately -->
+        <form> 
           <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" placeholder="Username">
@@ -41,10 +41,11 @@
             <input type="password" name="cpassword" placeholder="Confirm Password" id="cpassword">
             <div class="messages"></div>
           </div>      
+          <a class="small back" href="step-1.html">Back</a>
+          <a class="large" href="step-3.html"><button class='confirm' type="submit" name="next">Next   ➜</button></a>
         </form>
         <div>
-            <a class="small" href="step-1.html"><button class='back' name="back">Back</button></a>
-            <a class="large" href="step-3.html"><button class='confirm' name="next">Next   ➜</button></a>
+            
         </div>
       
       </section>
