@@ -9,20 +9,23 @@
   <body>
 
     <header class='small'>
+      <img class="logo-left" src="../images/logo_curled.svg">
       <div class='title-bubble small'>
         <h1>Create Your Character</h1>
       </div>
     </header>
     
     <section class='builder'>
-      <canvas></canvas>
+      <canvas id="bird-canvas"></canvas>
       <form class="small">
         <div class="form-group small">
-          <input type="text" id="name" name="name" placeholder="Bird's Name">
+          <input type="text" class="s" id="name" name="Bird_name" placeholder="Bird's Name">
           <div class="messages small"></div>
         </div>
-        <a class="small back" href="../index.html">Back</a> 
-          <a class="large" href="step-2.html"><button class='confirm' type='submit' name="next">Next   ➜</button></a>
+        <div class="two-buttons">
+          <a class="small" href="../index.html"><button class="back" type="button">Back</button></a>
+          <a class="medium" href="step-2.html"><button class='confirm' type='submit' name="next">Next   ➜</button></a>
+        <div>
       </form>
     </section>
     
@@ -46,6 +49,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script type="text/javascript" src="../js/Character creator.js"></script>
-    <script type="text/javascript" src="../js/validate-s1.js"></script>
+    <script type="text/javascript" src="../js/script_p1.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
   </body>
 </html>

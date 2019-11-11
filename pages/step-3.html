@@ -3,12 +3,13 @@
 
   <head>
     <meta charset='UTF-8' />
-    <title>Step 2</title>
+    <title>Step 3</title>
     <link rel='stylesheet' href='../css/style.css' />
   </head>
 
   <body>
     <header class='menu'>
+      <img class="logo-left" src="../images/logo_curled.svg">
       <div class="title-bubble">
         <h1>Registration</h1>
         <p>Step 3/3</p>
@@ -17,16 +18,16 @@
 
     <main class='page'>
       <section class='form'>
-        <form> <!-- Form was stopping buttons from submitting so I am using it seperately -->
+        <form>
           <div class="form-group">
             <label for="age">Age</label>
-            <input type="number" id="age" name="age" placeholder="Enter your age here">
+            <input type="number" id="age" name="Age" placeholder="Enter your age here">
             <div class="messages"></div>
           </div>
 
           <div class="form-group">
               <label for="country">Country</label>
-              <select id="country" name="country">
+              <select id="country" name="Country">
                 <option value="">  Choose Country</option>
                 <option value="AX">  Åland Islands</option>
                 <option value="AL">  Albania</option>
@@ -50,7 +51,7 @@
 
             <div class="form-group">
                 <label for="gender">Gender</label>
-                <select id="gender" name="gender">
+                <select id="gender" name="Gender">
                   <option value="">  Select Gender</option>
                   <option value="M">  Boy</option>
                   <option value="F">  Girl</option>
@@ -59,20 +60,22 @@
                 <div class="messages"></div>
               </div>
 
-          <div class="form-group checkbox">
-            <input type="checkbox" name="tandc" id="tandc" ><p>I have read and agree to the terms and conditions</p>
+          <div class="form-group checkboxdiv" onclick="activateCheckbox(0)">
+            <input type="checkbox" class="checkbox" name="Terms_and_conditions" id="tandc" onclick="updateCheckbox()" required><p>I have read and agree to the terms and conditions</p>
             <div class="messages"></div>
           </div>    
-          <div class="form-group checkbox">
-              <input type="checkbox" name="mailing" id="mailing" ><p>I want to be emailed about updates and news from BirdClub</p>
+          <div class="form-group checkboxdiv" onclick="activateCheckbox(1)">
+              <input type="checkbox" class="checkbox" name="mailing" id="mailing" checked=true onclick="updateCheckbox()"><p>I want to be emailed about updates and news from BirdClub</p>
               <div class="messages"></div>
             </div>  
-          <div class="form-group checkbox">
-            <input type="checkbox" name="remember" id="remember" ><p>Remember me on this computer</p>
+          <div class="form-group checkboxdivb" onclick="activateCheckbox(2)">
+            <input type="checkbox" class="checkbox" name="remember" id="remember" onclick="updateCheckbox()"><p>Remember me on this computer</p>
             <div class="messages"></div>
           </div>
-          <a class="small back" href="step-2.html">Back</a>
-          <a class="large" href="confirm.html"><button class='confirm' name="next">Create Account</button></a>
+          <div class="two-buttons">
+            <a class="small" href="step-2.html"><button class="back" type="button">Back</button></a>
+            <a class="medium" href="confirm.html"><button class='confirm' name="next">Create Account</button></a>
+          </div>
         </form>
         <div>
             
@@ -86,7 +89,8 @@
   <!-- Online Imports -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
   <!-- Offline Scripts -->
-  <script type="text/javascript" src="../js/validate-s3.js"></script>
+  <script type="text/javascript" src="../js/script_p3.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
 
   </body>
 

@@ -1,65 +1,3 @@
-
- // These are the constraints used to validate the form
-  var constraints = {
-    name: {
-      // You need to pick a username too
-      presence: true,
-      // And it must be between 3 and 20 characters long
-      length: {
-        minimum: 3,
-      },
-      format: {
-        // We don't allow anything that a-z and 0-9
-        pattern: "[a-z ]+",
-        // but we don't care if the username is uppercase or lowercase
-        flags: "i",
-        message: "can only contain letters"
-      }
-    },
-    email: {
-      // Email is required
-      presence: true,
-      // and must be an email (duh)
-      email: true
-    },
-    password: {
-      // Password is also required
-      presence: true,
-      // And must be at least 5 characters long
-      length: {
-        minimum: 5
-      }
-    },
-    cpassword: {
-      length: {
-        minimum: 5
-      }
-    },
-    country: {
-      // You also need to input where you live
-      presence: true,
-      // And we restrict the countries supported to Sweden
-      inclusion: {
-        within: ["AU"],
-        // The ^ prevents the field name from being prepended to the error
-        message: "^Sorry, this service is currently for Australians only"
-      }
-    },
-    postcode: {
-      // postcode is optional but if specified it must be a 4 digit long number
-      format: {
-        pattern: "\\d{4}",
-        message: "Postcode must be 4 digits"
-      },
-
-    },
-    tandc: {
-      prescense:true
-    }
-  };
-
-
-
   // Hook up the form so we can prevent it from being posted
   var form = document.querySelector("form");
   form.addEventListener("submit", function(ev) {
@@ -69,12 +7,24 @@
 
   // Hook up the inputs to validate on the fly
   var inputs = document.querySelectorAll("input, textarea, select");
+  function setup() {
+    for (var i = 0; i < inputs.length; ++i) {
+      if (inputs.item(i).name == "Password" || inputs.item(i).name == "Confirm_password") { //stops the two password forms from being autofilled. Does not remove them from local storage though
+        
+      } else {
+        inputs.item(i).value = localStorage.getItem(inputs.item(i).name);
+      }
+    }
+  }
+  setup();
   console.log(inputs);
   for (var i = 0; i < inputs.length; ++i) {
-    inputs.item(i).addEventListener("change", function(ev) {
-
+    inputs.item(i).addEventListener("change", function() {
       var errors = validate(form, constraints) || {};
       showErrorsForInput(this, errors[this.name])
+
+      //Store changes in local storage
+      localStorage.setItem(this.name, this.value)
     });
   }
 
@@ -150,9 +100,4 @@
     block.classList.add("error");
     block.innerText = error;
     messages.appendChild(block);
-  }
-
-  function showSuccess() {
-    // We made it \:D/
-    alert("Success!");
   }

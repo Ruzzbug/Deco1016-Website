@@ -10,8 +10,9 @@ let birdRetrievalTest = [];
 
 let currentGrid = [];
 
-let cwidth = window.innerHeight/1.34;
-let cheight = window.innerHeight/1.34;
+let maxcwidth = 700;
+let cwidth = window.innerHeight * 0.8;
+let cheight = 700;
 console.log(window.innerHeight/1.34);
 
 //The Images' Sources
@@ -69,7 +70,13 @@ function checkPage() {
 }
 
 function buildCanvas () {
-    canvas.width = cwidth;
+    if (cwidth >= maxcwidth) {
+        canvas.width = maxcwidth;
+        document.getElementById("bird-canvas").style.width = maxcwidth;
+    } else {
+        canvas.width = cwidth;
+        document.getElementById("bird-canvas").style.width = cwidth;
+    }
     canvas.height = cheight;
 }
 
@@ -104,7 +111,15 @@ function loadBird() {
 //Handles drawing the bird to the canvas each time a new part is chosen
 function update() {
     localStorage.setItem(birdKey, birdArr);
-    canvas.height = window.innerHeight/1.2;
+    canvas.height = 700;
+    if (cwidth >= maxcwidth) {
+        canvas.width = maxcwidth;
+        document.getElementById("bird-canvas").style.width = maxcwidth;
+    } else {
+        canvas.width = cwidth;
+        document.getElementById("bird-canvas").style.width = cwidth;
+    }
+    
     //Update the canvas
     clearCanvas();
     //Draw all 5 pictures
@@ -113,6 +128,13 @@ function update() {
     }
 }
 
+window.addEventListener("resize", resize);
+
+function resize (event) {
+    cwidth = window.innerHeight * 0.8;
+    console.log("resized");
+	update();
+};
 
 //Makes the grid appear and dissapear
 function buildGrid (index) {

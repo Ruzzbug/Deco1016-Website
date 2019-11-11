@@ -9,15 +9,18 @@
 
   
   <body>
-    <header class='tall-menu'>Menu</header>
+    
+    <header class='tall-menu'>
+        <img class="logo-mid" src="images/logo_curled.svg">
+      <div class="top-hemisphere"></div>
+    </header>
+
     <main class='page'>
       <section class='content' type='whitecontent'>
         <input type="text" name="user" placeholder="Username" id="userinput">
-
         <input type="text" name="pass" placeholder="Password" id="userinput">
-
-        <a><button type="submit" class='confirm' name="Login" id="big-button">Sign In</button></a>
-        <a href="pages/step-1.html"><button class='back' name="Sign Up" id="big-button">Register</button></a>  
+        <a class="large"><button type="submit" class='confirm' name="Login" id="big-button">Sign In</button></a>
+        <a class="large" href="pages/step-1.html"><button class='back' name="Sign Up" id="big-button">Register</button></a>  
       </section>
     </main>
     
@@ -36,7 +39,7 @@
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip</p>
           <br>
         </div>
-      </footer>
+    </footer>
 
       <script>
           if (localStorage.getItem("pageKey") === null) {
